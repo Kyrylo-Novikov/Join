@@ -288,7 +288,7 @@ li[contenteditable="true"] {
   }
 
   .form-scroll-container {
-    height: calc(100vh - 280px);
+    height: calc(100vh - 320px);
   }
 }
 
