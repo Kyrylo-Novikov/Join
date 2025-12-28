@@ -1,5 +1,5 @@
-function addTaskOverlay(status = 'toDo'){
-    return `<div id="task-message" style="display: none;">
+function addTaskOverlay(status = "toDo") {
+  return `<div id="task-message" style="display: none;">
             <p>Task added to board</p>
             <img src="../assets/icons/board_icon.png" alt="Board Icon">
             </div>
@@ -57,7 +57,7 @@ function addTaskOverlay(status = 'toDo'){
             <span><strong>Category</strong></span>
             <div class="cat" onclick="toggleOptions()">
                 <span id="category_add_task">Select category</span>
-                <img src="/assets/icons/arrow_drop_down.svg" alt="Arrow" id="arrowIconCategory">
+                <img src="../assets/icons/arrow_drop_down.svg" alt="Arrow" id="arrowIconCategory">
             </div>
                 <div id="options_container" class="options_container" style="display: none;">
                 <div class="option_category" onclick="selectCategory('Technical Task')">Technical Task</div>
@@ -82,11 +82,11 @@ function addTaskOverlay(status = 'toDo'){
                     <img src="../assets/icons/check.svg" alt="">
                 </button>
             </div> 
-   </div> `
+   </div> `;
 }
 
-function addTaskInProgressOverlay(status = 'inProgress'){
-    return `<div id="task-message" style="display: none;">
+function addTaskInProgressOverlay(status = "inProgress") {
+  return `<div id="task-message" style="display: none;">
             <p>Task added to board</p>
             <img src="../assets/icons/board_icon.png" alt="Board Icon">
             </div>
@@ -169,11 +169,11 @@ function addTaskInProgressOverlay(status = 'inProgress'){
                     <img src="../assets/icons/check.svg" alt="">
                 </button>
             </div> 
-   </div> `
+   </div> `;
 }
 
-function addTaskAwaitFeedbackOverlay(status = 'awaitFeedback'){
-    return `<div id="task-message" style="display: none;">
+function addTaskAwaitFeedbackOverlay(status = "awaitFeedback") {
+  return `<div id="task-message" style="display: none;">
             <p>Task added to board</p>
             <img src="../assets/icons/board_icon.png" alt="Board Icon">
             </div>
@@ -222,7 +222,7 @@ function addTaskAwaitFeedbackOverlay(status = 'awaitFeedback'){
            <span><strong>Assigned to </strong>(optional)</span>
            <div class="select_contact" onclick="toggleUserDropdown()">
                 <span id="selectContactText">Select contact to assign</span>
-                <img src="/assets/icons/arrow_drop_down.svg" alt="Arrow" id="arrowIcon">
+                <img src="../assets/icons/arrow_drop_down.svg" alt="Arrow" id="arrowIcon">
             </div>
             <div id="selected_user_container"></div>
             <div class="contact_dropdown" id="contactDropdown"></div>
@@ -231,7 +231,7 @@ function addTaskAwaitFeedbackOverlay(status = 'awaitFeedback'){
             <span><strong>Category</strong></span>
             <div class="cat" onclick="toggleOptions()">
                 <span id="category_add_task">Select category</span>
-                <img src="/assets/icons/arrow_drop_down.svg" alt="Arrow" id="arrowIconCategory">
+                <img src="../assets/icons/arrow_drop_down.svg" alt="Arrow" id="arrowIconCategory">
             </div>
                 <div id="options_container" class="options_container" style="display: none;">
                 <div class="option_category" onclick="selectCategory('Technical Task')">Technical Task</div>
@@ -256,49 +256,53 @@ function addTaskAwaitFeedbackOverlay(status = 'awaitFeedback'){
                     <img src="../assets/icons/check.svg" alt="">
                 </button>
             </div> 
-   </div> `
+   </div> `;
 }
 
 function subtaskActionsTemplate() {
-    return `
+  return `
         <img id="subtask-check-icon" src="../assets/icons/check.png" alt="Check" onclick="addSubtaskOverlay()">
         <img id="subtask-delete-icon" src="../assets/icons/x.png" alt="Delete" onclick="resetSubtaskIcons()">
     `;
 }
 
-function subtaskTemplate(subtaskValue){
-    return `<li class="added_subtask">
+function subtaskTemplate(subtaskValue) {
+  return `<li class="added_subtask">
              <span class="subtask_text">${subtaskValue}</span>
             <div class="subtask_actions">
                 <img src="../assets/icons/edit.png" alt="Edit" class="edit-icon"  onclick="editSubtask(this)">
                 <img src="../assets/icons/delete.png" alt="Delete" class="delete-icon" onclick="deleteSubtask(this)">
                 <img src="../assets/icons/check.png" alt="Confirm" class="check-icon" onclick="confirmEdit(this)" style="display:none;">
-            </div></li>`
+            </div></li>`;
 }
 
 function generateSingleUser(element, isChecked) {
-    let name = element.name; 
-    let nameParts = name.split(' ');
-    let initials = nameParts.length >= 2 ? `${nameParts[0][0]}${nameParts[1][0]}` : name[0];
-    let color = getColorForUser(name); 
+  let name = element.name;
+  let nameParts = name.split(" ");
+  let initials =
+    nameParts.length >= 2 ? `${nameParts[0][0]}${nameParts[1][0]}` : name[0];
+  let color = getColorForUser(name);
 
-    return `
+  return `
         <label for="user-${element.id}" class="user-item">
             <span class="user-icon" style="background-color: ${color};">${initials}</span>
             <span class="user-name">${name}</span>
-            <input type="checkbox" id="user-${element.id}" value="${name}" ${isChecked ? 'checked' : ''} onchange="updateSelectedUsers()">
+            <input type="checkbox" id="user-${element.id}" value="${name}" ${
+    isChecked ? "checked" : ""
+  } onchange="updateSelectedUsers()">
             <span class="checkbox-custom"></span>
         </label>
     `;
 }
 
 function generateUserIcon(user) {
-    let name = user.name;
-    let nameParts = name.split(' ');
-    let initials = nameParts.length >= 2 ? `${nameParts[0][0]}${nameParts[1][0]}` : name[0];
-    let color = getColorForUser(name); 
+  let name = user.name;
+  let nameParts = name.split(" ");
+  let initials =
+    nameParts.length >= 2 ? `${nameParts[0][0]}${nameParts[1][0]}` : name[0];
+  let color = getColorForUser(name);
 
-    return `
+  return `
         <span class="user-icon" style="background-color: ${color};">${initials}</span>
     `;
 }
