@@ -44,7 +44,7 @@ function validateLoginForm() {
  */
 function redirectToSummary() {
   localStorage.setItem("isLoggedIn", "true");
-  window.location.href = "/html/summary.html";
+  window.location.href = "Join/html/summary.html";
 }
 
 /**
