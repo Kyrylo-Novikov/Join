@@ -19,37 +19,40 @@
 
   <body onload="init()">
     <header class="header">
-       <div class="header_content">
-      <div class="logo-container">
-        <img src="../assets/icons/logo.svg" alt="Logo" />
-      </div>
-      <div class="header-right">
-        <span>Kanban Project Management Tool</span>
-        <a class="help-link" href="help.html"
-          ><img src="../assets/icons/help.svg" alt="Help"
-        /></a>
-        <div
-          onclick="toggleProfileMenu ()"
-          class="icon-wrapper"
-          id="icon-wrapper"
-        >
-          <div class="icon-container" id="icon-container">G</div>
+      <div class="header_content">
+        <div class="logo-container">
+          <img src="../assets/icons/logo.svg" alt="Logo" />
+        </div>
+        <div class="header-right">
+          <span>Kanban Project Management Tool</span>
+          <a class="help-link" href="help.html">
+            <img src="../assets/icons/help.svg" alt="Help" />
+          </a>
+          <div
+            onclick="toggleProfileMenu ()"
+            class="icon-wrapper"
+            id="icon-wrapper"
+          >
+            <div class="icon-container" id="icon-container">G</div>
+          </div>
+        </div>
+        <div class="profile_menu" id="profile_menu">
+          <ul class="profile_menu_list">
+            <li class="profile_menu_item help-item">
+              <a href="help.html">Help</a>
+            </li>
+            <li class="profile_menu_item">
+              <a href="legalNotice.html">Legal Notice</a>
+            </li>
+            <li class="profile_menu_item">
+              <a href="privacyPolicy.html">Privacy Policy</a>
+            </li>
+            <li class="profile_menu_item">
+              <a href="../index.html">Log out</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="profile_menu" id="profile_menu">
-        <ul class="profile_menu_list">
-          <li class="profile_menu_item help-item">
-            <a href="help.html">Help</a>
-          </li>
-          <li class="profile_menu_item">
-            <a href="legalNotice.html">Legal Notice</a>
-          </li>
-          <li class="profile_menu_item">
-            <a href="privacyPolicy.html">Privacy Policy</a>
-          </li>
-          <li class="profile_menu_item"><a href="../index.html">Log out</a></li>
-        </ul>
-      </div></div>
     </header>
     <div class="content-wrapper">
       <section class="add-task-content d_flex">
@@ -119,8 +122,9 @@
                   ></div>
                 </div>
                 <div class="description-wrapper d-f-column d_flex pointer">
-                  <label class="pointer" for="description-add-task"
-                    >Description <span>(optional)</span>
+                  <label class="pointer" for="description-add-task">
+                    Description
+                    <span>(optional)</span>
                   </label>
                   <textarea
                     onclick="textareaCursPos()"
@@ -129,14 +133,13 @@
                     class="custom-resize description-add-task pointer"
                     id="description-add-task"
                     placeholder="Enter a Description"
-                  >
-                  </textarea>
+                  ></textarea>
                   <div class="resize" onmousedown="resizeTextarea(event)"></div>
                   <div class="validation-add-task-form"></div>
                 </div>
                 <div class="date-wrapper d-f-column d_flex">
-                  <label for="date-input-add-task" class="pointer"
-                    >Due date *
+                  <label for="date-input-add-task" class="pointer">
+                    Due date *
                   </label>
                   <input
                     type="date"
@@ -163,7 +166,7 @@
                     <label for="nativ-date-input" onclick="showPicker()">
                       <img
                         class="date-picker-icon pointer"
-                        src="/assets/icons/event.png"
+                        src="../assets/icons/event.png"
                         alt="Open the date picker"
                       />
                     </label>
@@ -254,7 +257,8 @@
               </div>
               <div class="wrapper-assigned-to">
                 <label for="assigned-to-input" class="pointer">
-                  Assigned to <span>(optional)</span>
+                  Assigned to
+                  <span>(optional)</span>
                 </label>
                 <div
                   id="assigned-to-container"
@@ -293,7 +297,7 @@
                 </div>
               </div>
               <div class="wrapper-category" id="wrapper-category">
-                <label class="pointer"> Category * </label>
+                <label class="pointer">Category *</label>
                 <div
                   class="wrapper-select d_flex"
                   id="select-category"
@@ -322,12 +326,11 @@
                       alt="Close the 'Category' dropdown"
                     />
                   </div>
-                  
                 </div>
                 <div
-                    class="validation-add-task-form"
-                    id="category-validation"
-                  ></div>
+                  class="validation-add-task-form"
+                  id="category-validation"
+                ></div>
                 <div
                   class="option-category pointer"
                   onclick="stopPropagation(event)"
@@ -344,7 +347,10 @@
                 </div>
               </div>
               <div class="wrapper-subtasks d_flex d-f-column gap-8">
-                <label for="subtask">Subtasks <span>(optional)</span></label>
+                <label for="subtask">
+                  Subtasks
+                  <span>(optional)</span>
+                </label>
                 <div
                   class="subtask-area"
                   id="subtask-area"
@@ -365,7 +371,7 @@
                       id="working-icons-opener"
                     >
                       <img
-                        src="/assets/icons/add.png"
+                        src="../assets/icons/add.png"
                         alt="Start typing a subtask"
                         class="pointer"
                         onclick="fokusSubtaskInp()"
@@ -376,7 +382,7 @@
                       id="input-subtask-icons"
                     >
                       <img
-                        src="/assets/icons/close_cross.svg"
+                        src="../assets/icons/close_cross.svg"
                         class="d_flex center-center icon-form icon-24 pointer"
                         id="subtask_input_clear"
                         alt="Clear subtask input"
@@ -384,7 +390,7 @@
                       />
                       <div class="separator"></div>
                       <img
-                        src="/assets/icons/check_blue.svg"
+                        src="../assets/icons/check_blue.svg"
                         class="d_flex center-center icon-form icon-24 pointer"
                         alt="Add subtask"
                         onclick="subtaskInputCheck()"
@@ -393,7 +399,7 @@
                   </div>
                 </div>
                 <ul
-                  class="added-subtasks d-f-column d_flex  gap-8 custom-list"
+                  class="added-subtasks d-f-column d_flex gap-8 custom-list"
                   id="added-subtasks"
                 ></ul>
               </div>
@@ -422,13 +428,13 @@
         </div>
       </section>
     </div>
-    <script src="/script/header.js"></script>
-    <script src="/script/script.js"></script>
-    <script src="/script/addTask_DD.js"></script>
-    <script src="/script/addTask_subtask.js"></script>
-    <script src="/script/addTask_api.js"></script>
-    <script src="/script/template_addTask.js"></script>
-    <script src="/script/addTask.js"></script>
-    <script src="/script/addTask_date.js"></script>
+    <script src="../script/header.js"></script>
+    <script src="../script/script.js"></script>
+    <script src="../script/addTask_DD.js"></script>
+    <script src="../script/addTask_subtask.js"></script>
+    <script src="../script/addTask_api.js"></script>
+    <script src="../script/template_addTask.js"></script>
+    <script src="../script/addTask.js"></script>
+    <script src="../script/addTask_date.js"></script>
   </body>
 </html>

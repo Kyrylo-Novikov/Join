@@ -1,332 +1,336 @@
 .board_content {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-    overflow-y: auto;
-    flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  overflow-y: auto;
+  flex: 1;
 }
 
 .board_content::-webkit-scrollbar {
-    width:  8px;
-    background-color:#e0e0e0;
-    border-radius: 10px;
+  width: 8px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
 }
 
-.board_content::-webkit-scrollbar-thumb{
-    background-color:#4589ff; 
-    border-radius: 4px;
+.board_content::-webkit-scrollbar-thumb {
+  background-color: #4589ff;
+  border-radius: 4px;
 }
 
 .board_content::-webkit-scrollbar-thumb:hover {
-    cursor: grab;
+  cursor: grab;
 }
 
 .board_content::-webkit-scrollbar-thumb:hover:active {
-    cursor: grabbing;
+  cursor: grabbing;
 }
 
-.board_content::-webkit-scrollbar-thumb:hover{
-    background-color: #005DFF;
+.board_content::-webkit-scrollbar-thumb:hover {
+  background-color: #005dff;
 }
 
-.toDo, .inProgress, .awaitFeedback, .done {
-    width: 300px;
+.toDo,
+.inProgress,
+.awaitFeedback,
+.done {
+  width: 300px;
 }
 
-.toDo_header, .inProgress_header, .awaitFeedback_header, .done_header {
-    padding-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.toDo_header,
+.inProgress_header,
+.awaitFeedback_header,
+.done_header {
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.toDo_header img:hover, .inProgress_header img:hover, .awaitFeedback_header img:hover, .done_header img:hover {
-    cursor: pointer;
-    filter: brightness(0.9);
-
+.toDo_header img:hover,
+.inProgress_header img:hover,
+.awaitFeedback_header img:hover,
+.done_header img:hover {
+  cursor: pointer;
+  filter: brightness(0.9);
 }
 
 .drag_area {
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding-bottom: 20px;
-    min-height: 500px; 
-     flex: 1;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 20px;
+  min-height: 500px;
+  flex: 1;
 }
 
 .noTask_msg {
-    height: 40px;
-    width: 100%;
-    background-color: #e7e7e7;
-    border: 1px dotted #a8a8a8;
-    color: #a8a8a8;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 10px;
-    margin-top: 5px;
+  height: 40px;
+  width: 100%;
+  background-color: #e7e7e7;
+  border: 1px dotted #a8a8a8;
+  color: #a8a8a8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  margin-top: 5px;
 }
 
 .drag-area-highlight {
-    background-color: #e7e7e7;
-    border: 1px dashed rgba(0, 0, 0, 0.5);
+  background-color: #e7e7e7;
+  border: 1px dashed rgba(0, 0, 0, 0.5);
 }
 
 .ticket {
-    background-color: var(--secondaryColor);
-    border: 1px solid #f7f7f7;
-    border-radius: 10px;
-    width: 290px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-    margin-top: 5px;
+  background-color: var(--secondaryColor);
+  border: 1px solid #f7f7f7;
+  border-radius: 10px;
+  width: 290px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  margin-top: 5px;
 }
 
-.ticket :hover{
-    cursor: pointer;
+.ticket :hover {
+  cursor: pointer;
 }
 
 .ticket_category {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px ; 
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
 }
 
-
 .ticket_category img {
-    display: none;
-    transition: transform 0.1s, box-shadow 0.1s;
+  display: none;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .ticket_category img:hover {
-    transform: scale(1.05); 
-  }
-  
-  .ticket_category img:active {
-    transform: scale(0.95); 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
+  transform: scale(1.05);
+}
+
+.ticket_category img:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 .ticket_category span {
-    padding: 5px 15px;
-    border-radius: 10px;
-    color: var(--secondaryColor);
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: var(--secondaryColor);
 }
 
-.ticket_title{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    color: #4589ff;
+.ticket_title {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  color: #4589ff;
 }
 
-.ticket_description{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    color: #a8a8a8;
+.ticket_description {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  color: #a8a8a8;
 }
 
 .ticket_subtasks {
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-    padding-left: 20px;
-    padding-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .progress_bar {
-    width: 50%;
-    height: 10px;
-    background-color: #e0e0e0;
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
+  width: 50%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
 }
 
 .progress {
-    height: 100%;
-    background-color: #4589ff; 
-    transition: width 0.3s ease-in-out;
+  height: 100%;
+  background-color: #4589ff;
+  transition: width 0.3s ease-in-out;
 }
 
 .completed {
-    font-weight: bold;
-    color: #333;
+  font-weight: bold;
+  color: #333;
 }
 
 .ticket_footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:20px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
 
-.ticket_footer.no_users{
-    padding: 0 20px  20px  20px;
+.ticket_footer.no_users {
+  padding: 0 20px 20px 20px;
 }
 
 .ticket_users {
-    position: relative;  
-    width: 100%;  
-    height: 50px; 
-    white-space: nowrap;  
-    overflow: hidden;  
+  position: relative;
+  width: 100%;
+  height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .user_icon {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    border: 2px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .priority_overlay span {
-    font-weight: bold;
-    color: #42526e ;
+  font-weight: bold;
+  color: #42526e;
 }
 
-
-.assigned_overlay{
-    padding-bottom: 20px;
+.assigned_overlay {
+  padding-bottom: 20px;
 }
 
-.assigned_overlay table{
-    width: 100%;
+.assigned_overlay table {
+  width: 100%;
 }
 
 .assigned_overlay th {
-    text-align: left; 
-    padding-bottom: 10px;
-    color: #42526e ;
+  text-align: left;
+  padding-bottom: 10px;
+  color: #42526e;
 }
 
 .assigned_users_scroll {
-    gap: 10px;
-    max-height: 250px; 
-    overflow-y: auto;
-    padding-right: 5px; 
+  gap: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 5px;
 }
 
 .assigned_users_scroll::-webkit-scrollbar {
-    width:  3px;
-    background-color:#e0e0e0;
-    border-radius: 10px;
+  width: 3px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
 }
 
-.assigned_users_scroll::-webkit-scrollbar-thumb{
-    background-color:#4589ff; 
-    border-radius: 4px;
+.assigned_users_scroll::-webkit-scrollbar-thumb {
+  background-color: #4589ff;
+  border-radius: 4px;
 }
 
 .assigned_users_scroll::-webkit-scrollbar-thumb:hover {
-    cursor: grab;
+  cursor: grab;
 }
 
 .assigned_users_scroll::-webkit-scrollbar-thumb:hover:active {
-    cursor: grabbing;
+  cursor: grabbing;
 }
 
-.assigned_users_scroll::-webkit-scrollbar-thumb:hover{
-    background-color: #005DFF;
+.assigned_users_scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #005dff;
 }
 
-.user_icon_plus_name{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    gap:15px;
-    padding-left: 10px;
+.user_icon_plus_name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+  padding-left: 10px;
 }
 
 .user_icon_overlay {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
-    line-height: 40px;
-    font-weight: bold;
-    
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
 }
 
 .active_span:before {
-    content: url("/assets/icons/board_icon.png");
-    background-color: var(--menuHoverColor);
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 8px;
-    align-items: center;
-    gap: 8px;
+  content: url("../assets/icons/board_icon.png");
+  background-color: var(--menuHoverColor);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  align-items: center;
+  gap: 8px;
 }
 
 .active_span {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .status_menu {
-    position: fixed;
-    background: #0038ff;
-    color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    padding: 10px;
-    z-index: 1000;
-  }
-  
-  .status_menu.hidden {
-    display: none;
-  }
-  
-  .status_menu div {
-    padding: 8px 12px;
-  }
-  
-  .status_menu div:hover {
-    cursor: pointer;
-    background-color: var(--menuHoverColor);
-    border-radius: 8px;
-    color: black;
-  }
+  position: fixed;
+  background: #0038ff;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+}
 
-  .status_menu div:hover img {
-    filter: brightness(0) saturate(100%);
+.status_menu.hidden {
+  display: none;
+}
+
+.status_menu div {
+  padding: 8px 12px;
+}
+
+.status_menu div:hover {
+  cursor: pointer;
+  background-color: var(--menuHoverColor);
+  border-radius: 8px;
+  color: black;
+}
+
+.status_menu div:hover img {
+  filter: brightness(0) saturate(100%);
 }
 
 .tooltip {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color:#0038ff;
-    color: white;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-size: 14px;
-    opacity: 0.9;
-    z-index: 9999;
-    transition: opacity 0.3s ease;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0038ff;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
 }
 
 .tooltip.hidden {
-    display: none;
+  display: none;
 }

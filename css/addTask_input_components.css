@@ -67,7 +67,7 @@ textarea {
   height: 24px;
   background-color: #ffffff;
   background-size: contain;
-  background: url(/assets/icons/Recurso.svg) no-repeat center center;
+  background: url(../assets/icons/Recurso.svg) no-repeat center center;
 }
 
 textarea:focus {

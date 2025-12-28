@@ -219,7 +219,7 @@ li[contenteditable="true"] {
 }
 
 .active_span:before {
-  content: url("/assets/icons/add_task_icon.png");
+  content: url("../assets/icons/add_task_icon.png");
   background-color: var(--menuHoverColor);
   display: inline-block;
   vertical-align: middle;
@@ -260,7 +260,7 @@ li[contenteditable="true"] {
   .active_span::before {
     background-color: transparent;
     color: #4589ff !important;
-    content: url("/assets/icons/add_task_icon_blue.png");
+    content: url("../assets/icons/add_task_icon_blue.png");
     margin-right: 0;
   }
 
